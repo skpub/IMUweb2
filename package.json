@@ -4,21 +4,29 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "pregenerate": "mkdir generate",
+    "generate": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./generate --grpc_out=grpc_js:./generate --ts_out=grpc_js:./generate -I IMUbackendPlugin/src/main/proto IMUbackendPlugin/src/main/proto/*.proto",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write"
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@types/google-protobuf": "^3.15.12",
+    "google-protobuf": "^4.0.0",
+    "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.5.2"
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@biomejs/biome": "2.2.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@biomejs/biome": "2.2.0"
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "grpc-tools": "^1.13.0",
+    "typescript": "^5.9.2"
   }
 }

@@ -1,0 +1,3 @@
+[submodule "IMUbackendPlugin"]
+	path = IMUbackendPlugin
+	url = https://github.com/skpub/IMUbackendPlugin
