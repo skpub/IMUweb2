@@ -8,5 +8,5 @@ Type=oneshot
 EnvironmentFile=.env
 User=${USER}
 Group=${GROUP}
-WorkingDirectory=${MC_DIR}
-ExecStart=${MC_DIR}/service.sh backup
+WorkingDirectory=${MC_HOME}
+ExecStart=${MC_HOME}/service.sh backup

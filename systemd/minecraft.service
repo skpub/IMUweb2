@@ -17,12 +17,12 @@ PrivateDevices=no
 NoNewPrivileges=yes
 PrivateTmp=no
 InaccessiblePaths=/root /sys /srv -/opt /media -/lost+found
-ReadWritePaths=${MC_DIR}
+ReadWritePaths=${MC_HOME}
 
-WorkingDirectory=${MC_DIR}
-ExecStart=${MC_DIR}/service.sh start
-ExecReload=${MC_DIR}/service.sh reload
-ExecStop=${MC_DIR}/service.sh stop
+WorkingDirectory=${MC_HOME}
+ExecStart=${MC_HOME}/service.sh start
+ExecReload=${MC_HOME}/service.sh reload
+ExecStop=${MC_HOME}/service.sh stop
 
 [Install]
 WantedBy=multi-user.target
