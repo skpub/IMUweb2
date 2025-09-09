@@ -117,13 +117,13 @@ IMUwebappのサーバコンポーネント: 権限管理によって呼ばれ、
 
 |サービス名称|内容|
 |---|---|
-|mcserver stop|マイクラサーバを停止する|
-|mcserver start|マイクラサーバを開始する|
-|mcserver backup|マイクラサーバのバックアップを実行する(※1)|
-|mcserver restore|マイクラサーバのリストアを行う(※2)|
+|minecraft.service|マイクラサーバを(停止|開始)する|
+|minecraft_backup.service (oneshot)|マイクラサーバのバックアップを実行する|
+|minecraft_backup.timer |マイクラサーバのバックアップをタイマー実行する(30minおき)|
 
-※1: 裏で`/save-all flush`を実行してから行う
-※2: マイクラサーバはリストアのために一旦死ぬ。その後リストアしてから復帰する動作をする。
+内部的にはスクリプトでマイクラサーバのtmuxセッションを管理しつつ適当なコマンドを呼ぶ構成になっている
+
+(/IMUbackend/service.sh)
 
 ## PostgreSQLの詳細
 
