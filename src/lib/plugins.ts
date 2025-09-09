@@ -5,7 +5,6 @@ const DATA_FILE = path.join(process.cwd(), 'plugins.json')
 
 export interface Plugin {
   version: string
-  filename: string
 }
 
 export interface Plugins {
@@ -15,7 +14,11 @@ export interface Plugins {
 export function readPlugins(): Plugins {
   if (!fs.existsSync(DATA_FILE)) return {}
   const raw = fs.readFileSync(DATA_FILE, 'utf-8')
-  return JSON.parse(raw) as Plugins
+  try {
+    return JSON.parse(raw) as Plugins
+  } catch {
+    return {}
+  }
 }
 
 export function writePlugins(plugins: Plugins) {
