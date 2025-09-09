@@ -122,10 +122,20 @@ IMUwebappのサーバコンポーネント: 権限管理によって呼ばれ、
 |minecraft_backup.timer |マイクラサーバのバックアップをタイマー実行する(30minおき)|
 
 内部的にはスクリプトでマイクラサーバのtmuxセッションを管理しつつ適当なコマンドを呼ぶ構成になっている
+(/systemd/service.sh)
 
-(/IMUbackend/service.sh)
 
-### systemdで用いる環境変数の例
+次の環境変数を必要とする(/systemd/.env)
+
+|環境変数|内容|
+|---|---|
+|USER|UNIXユーザ名|
+|GROUP|UNIXグループ名|
+|MC_HOME|マイクラのpaper.jarを動かすディレクトリ名|
+|ZFS_TANK|ZFSのタンク名|
+|GENERATION|バックアップの世代数|
+
+### 環境変数の例
 
 ```env
 USER=kaito
