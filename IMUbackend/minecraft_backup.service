@@ -1,0 +1,12 @@
+[Unit]
+Description=Minecraft Server Backup
+After=minecraft.service
+Requires=minecraft.service
+
+[Service]
+Type=oneshot
+EnvironmentFile=.env
+User=${USER}
+Group=${GROUP}
+WorkingDirectory=${MC_DIR}
+ExecStart=${MC_DIR}/service.sh backup

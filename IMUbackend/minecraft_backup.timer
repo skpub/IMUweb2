@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Minecraft backup every 30 minutes
+
+[Timer]
+OnBootSec=30min
+OnUnitActiveSec=30min
+AccuracySec=30s
+Unit=minecraft_backup.service
+
+[Install]
+WantedBy=timers.target

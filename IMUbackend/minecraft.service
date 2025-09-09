@@ -1,0 +1,28 @@
+[Unit]
+Description=Minecraft Server
+
+Wants=network.target
+After=network.target
+
+[Service]
+Type=forking
+EnvironmentFile=.env
+User=${USER}
+Group=${GROUP}
+Nice=5
+TimeoutStopSec=90
+
+ProtectSystem=full
+PrivateDevices=no
+NoNewPrivileges=yes
+PrivateTmp=no
+InaccessiblePaths=/root /sys /srv -/opt /media -/lost+found
+ReadWritePaths=${MC_DIR}
+
+WorkingDirectory=${MC_DIR}
+ExecStart=${MC_DIR}/service.sh start
+ExecReload=${MC_DIR}/service.sh reload
+ExecStop=${MC_DIR}/service.sh stop
+
+[Install]
+WantedBy=multi-user.target
