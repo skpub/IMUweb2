@@ -1,9 +1,9 @@
 #!/bin/bash
 # TMUXセッションでマイクラサーバを開始してくれるSystemdスクリプト用のbashスクリプト
 
-source .env
+source /etc/default/IMUbackup.env
 cd $MC_HOME
-MC_START_CMD="java -jar -Xmx8G -XX:+UseZGC $(cat /home/kaito/MCServer/current_jar)"
+MC_START_CMD="java -jar -Xmx8G -XX:+UseZGC server.jar"
 
 TMUX_SOCKET="minecraft"
 TMUX_SESSION="minecraft"

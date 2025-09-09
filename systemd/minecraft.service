@@ -6,7 +6,7 @@ After=network.target
 
 [Service]
 Type=forking
-EnvironmentFile=.env
+EnvironmentFile=/etc/default/IMUbackup.env
 User=${USER}
 Group=${GROUP}
 Nice=5
@@ -20,9 +20,9 @@ InaccessiblePaths=/root /sys /srv -/opt /media -/lost+found
 ReadWritePaths=${MC_HOME}
 
 WorkingDirectory=${MC_HOME}
-ExecStart=${MC_HOME}/service.sh start
-ExecReload=${MC_HOME}/service.sh reload
-ExecStop=${MC_HOME}/service.sh stop
+ExecStart=${IMU_REPO}/service.sh start
+ExecReload=${IMU_REPO}/service.sh reload
+ExecStop=${IMU_REPO}/service.sh stop
 
 [Install]
 WantedBy=multi-user.target

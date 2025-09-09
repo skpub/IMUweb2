@@ -125,13 +125,14 @@ IMUwebappのサーバコンポーネント: 権限管理によって呼ばれ、
 (/systemd/service.sh)
 
 
-次の環境変数を必要とする(/systemd/.env)
+次の環境変数を必要とする(/etc/default/IMUbackup.env)
 
 |環境変数|内容|
 |---|---|
 |USER|UNIXユーザ名|
 |GROUP|UNIXグループ名|
-|MC_HOME|マイクラのpaper.jarを動かすディレクトリ名|
+|MC_HOME|マイクラのpaper.jarを動かすPATH|
+|IMU_REPO|このリポジトリをcloneしたPATH|
 |ZFS_TANK|ZFSのタンク名|
 |GENERATION|バックアップの世代数|
 
@@ -141,6 +142,7 @@ IMUwebappのサーバコンポーネント: 権限管理によって呼ばれ、
 USER=kaito
 GROUP=kaito
 MC_HOME=/home/kaito/MCServer
+IMU_REPO=/home/kaito/IMUweb2
 ZFS_TANK=mcserver
 GENERATION=48
 ```

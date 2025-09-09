@@ -5,8 +5,8 @@ Requires=minecraft.service
 
 [Service]
 Type=oneshot
-EnvironmentFile=.env
+EnvironmentFile=/etc/default/IMUbackup.env
 User=${USER}
 Group=${GROUP}
 WorkingDirectory=${MC_HOME}
-ExecStart=${MC_HOME}/service.sh backup
+ExecStart=${IMU_REPO}/service.sh backup
