@@ -87,6 +87,32 @@
 |---|---|
 |学生|権限の閲覧を行う。|
 
+## PostgreSQLの詳細
+
+`docker compose up -d` で動かす。
+
+動作に次の環境変数を必要とする (/.env)。
+
+|環境変数|内容|
+|---|---|
+|DB_PORT|DBを動かすポート|
+|DB_USER|DBのユーザ名|
+|DB_PASSWORD|DBのパスワード|
+|DB_NAME|DB名|
+|ADMIN_UUID|管理者のマイクラのUUID|
+|ADMIN_USERNAME|管理者のマイクラのユーザ名|
+
+具体例は次の通り
+
+```env
+DB_PORT=5432
+DB_USER=kaito
+DB_PASSWORD=kaito
+DB_NAME=imuweb_db
+ADMIN_UUID=c5567453-d31a-4e0a-96d1-81b97422b561
+ADMIN_USERNAME=sato_kaito
+```
+
 ## Minecraft Serverの詳細
 
 ### プラグイン: バックアップ管理

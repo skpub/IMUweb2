@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:latest
+    env_file:
+      - ./.env
+    container_name: imuweb_db
+    ports:
+      - ${DB_PORT}:5432
+    volumes:
+      - db_store:/var/lib/postgresql/data
+      - ./dbinit:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+volumes:
+  db_store:
