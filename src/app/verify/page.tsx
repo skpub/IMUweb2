@@ -2,26 +2,33 @@
 
 import { redirect } from "next/navigation"
 import { useState } from "react"
+import { OTC2IDToken } from "./actions"
 
 export default function VerifyPage() {
-  const [code, setCode] = useState("")
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    const res = await fetch("/api/verify", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ code }),
-    })
-
-    if (res.ok) {
+  const [verifyState, setVerifyState] = useState<"idle" | "success" | "error">(
+    "idle",
+  )
+  const getToken = async (formData: FormData) => {
+    const res = await OTC2IDToken(formData)
+    if (res) {
       redirect("/auth")
+    } else {
+      setVerifyState("error")
     }
   }
+  const [code, setCode] = useState("")
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input value={code} onChange={(e) => setCode(e.target.value)} required />
+    <form action={getToken}>
+      <input
+        id="code"
+        name="code"
+        value={code}
+        onChange={(e) => setCode(e.target.value)}
+        required
+      />
       <button type="submit">送信</button>
+      {verifyState}
     </form>
   )
 }
