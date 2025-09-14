@@ -66,7 +66,9 @@ export async function OTC2IDToken(formData: FormData): Promise<boolean> {
     userName: idToken.mc_name,
   })
     .setProtectedHeader({ alg: "HS256" })
-    .setExpirationTime("1h")
+    .setExpirationTime("3d")
+    .setIssuer("IMUwebapp")
+    .setAudience("IMUwebapp")
     .sign(secret)
 
   const cookie = await cookies()
