@@ -6,7 +6,7 @@ export async function middleware(req: NextRequest) {
 
   switch (tokenState.state) {
     case "error":
-      return
+      return new NextResponse(null, { status: 401 })
     case "continue":
       return
     case "new": {
@@ -16,4 +16,8 @@ export async function middleware(req: NextRequest) {
       return response
     }
   }
+}
+
+export const config = {
+  matcher: "/auth/:path*",
 }

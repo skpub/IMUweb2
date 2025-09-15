@@ -17,7 +17,7 @@ const client = new IdTokenProviderClient(
   credentials.createInsecure(),
 )
 
-const pubkeyStr = fs.readFileSync(process.env.ID_TOKEN_PUBKEY_PATH!, "utf-8")
+const pubkeyStr = fs.readFileSync(process.env.ID_TOKEN_PUBKEY_PATH as string, "utf-8")
 const publickey = jose.importSPKI(pubkeyStr, "ES512")
 const encoder = new TextEncoder()
 const secret = encoder.encode(process.env.JWT_SECRET)

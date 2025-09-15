@@ -1,6 +1,4 @@
 import { cookies } from "next/headers"
-import { redirect } from "next/navigation"
-import { setNewToken, verifyJWT } from "@/lib/jwt"
 
 export default async function RootLayout({
   children,
