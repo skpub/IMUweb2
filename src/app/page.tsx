@@ -1,4 +1,3 @@
-"use client"
 import { SlideShow } from "@/components/slideshow"
 import img0 from "../../public/img0.webp"
 import img1 from "../../public/img1.webp"
@@ -13,7 +12,7 @@ export default function Home() {
   const imgs = [img0, img1, img2, img3, img4, img5]
   return (
     <div className={styles.main}>
-      <SlideShow styles={stylesSlideshow} imgs={imgs} interval={3000} />
+      <SlideShow styles={stylesSlideshow} imgs={imgs} interval={5000} />
     </div>
   )
 }

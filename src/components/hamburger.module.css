@@ -1,0 +1,9 @@
+.meats {
+  position: absolute;
+  right: 0;
+  background-color: var(--immoral);
+}
+
+.meat {
+  padding: 4px;
+}
