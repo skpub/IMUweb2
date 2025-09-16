@@ -1,5 +1,6 @@
 import Link from "next/link"
 import styles from "./page.module.css"
+import { MarginLeftRight24 } from "@/components/marginLeft24"
 
 export default function Home() {
   const departments = [
@@ -23,11 +24,11 @@ export default function Home() {
     },
   ]
   return (
-    <div>
+    <MarginLeftRight24>
       <h1 className={styles.title}>学部・大学院</h1>
       {departments.map(({ name, description, dean, href }) => (
-        <div key={name}>
-          <h1>{name}</h1>
+        <div className={styles.container} key={name}>
+          <h1 className={styles.department}>{name}</h1>
           <div>
             <p>{description}</p>
             <p>
@@ -37,6 +38,6 @@ export default function Home() {
           </div>
         </div>
       ))}
-    </div>
+    </MarginLeftRight24>
   )
 }

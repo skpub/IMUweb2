@@ -2,3 +2,11 @@
   text-align: center;
   margin: 32px;
 }
+
+.container {
+  margin-bottom: 32px;
+}
+
+.department {
+  margin-bottom: 18px;
+}
