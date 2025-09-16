@@ -60,7 +60,7 @@ export const Hamburger: React.FC<HamburgerProps> = ({ width, links }) => {
         >
           {links.map((link) => (
             <div className={styles.meat} key={link.title}>
-              <Link className={styles.link} href={link.href}>
+              <Link className={styles.link} onClick={() => setVisible(false)} href={link.href}>
                 {link.title}
               </Link>
             </div>
