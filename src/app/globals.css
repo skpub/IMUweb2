@@ -38,8 +38,7 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--im_light);
 }
 
 p,

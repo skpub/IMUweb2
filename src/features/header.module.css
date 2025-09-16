@@ -71,5 +71,6 @@
 
 .link {
   color: var(--white);
+  text-decoration: none;
   padding: 12px;
 }

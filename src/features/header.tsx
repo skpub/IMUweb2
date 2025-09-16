@@ -21,7 +21,7 @@ function Menu() {
     <div className={styles.menuContainer}>
       <div className={styles.MenuMobile}>
         {/* mobile */}
-        <Hamburger width={100} links={contents}></Hamburger>
+        <Hamburger width={200} links={contents}></Hamburger>
       </div>
       <div className={styles.MenuPC}>
         {/* PC */}
@@ -39,18 +39,20 @@ export function Header() {
   const scheme = useColorScheme()
   return (
     <div className={styles.main}>
-      <div className={styles.logoContainer}>
-        <Image
-          className={styles.imuLogo}
-          src={scheme === "dark" ? imuLogoLight : imuLogo}
-          alt={"インモラル大学のロゴです"}
-        />
-        <Image
-          className={styles.imuText}
-          src={scheme === "dark" ? imuTextLight : imuText}
-          alt={"インモラル大学のロゴです"}
-        />
-      </div>
+      <Link href="/">
+        <div className={styles.logoContainer}>
+          <Image
+            className={styles.imuLogo}
+            src={scheme === "dark" ? imuLogoLight : imuLogo}
+            alt={"インモラル大学のロゴです"}
+          />
+          <Image
+            className={styles.imuText}
+            src={scheme === "dark" ? imuTextLight : imuText}
+            alt={"インモラル大学のロゴです"}
+          />
+        </div>
+      </Link>
       <Menu />
     </div>
   )
