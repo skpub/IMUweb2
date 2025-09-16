@@ -15,7 +15,7 @@ function Menu() {
     { title: "学長挨拶", href: "/president" },
     { title: "アクセス", href: "/access" },
     { title: "学部・大学院", href: "/department" },
-    { title: "入試情報", href: "/entrance" },
+    { title: "入試情報", href: "/admission" },
   ]
   return (
     <div className={styles.menuContainer}>

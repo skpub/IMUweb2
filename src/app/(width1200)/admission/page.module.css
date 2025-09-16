@@ -1,0 +1,22 @@
+.title {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.container {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.margin24 {
+  margin-left: 24px;
+}
+
+.list {
+  li {
+    a {
+      color: var(--im_light);
+      text-decoration: underline;
+    }
+  }
+}
