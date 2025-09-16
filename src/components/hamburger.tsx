@@ -1,54 +1,25 @@
 import Image from "next/image"
 import Link from "next/link"
-import React, { useState } from "react"
+import type React from "react"
+import { useState } from "react"
 import hamburgerIcon from "@/../public/hamburger.svg"
 import hamburgerLightIcon from "@/../public/hamburger_light.svg"
 import timesIcon from "@/../public/times.svg"
 import timesLightIcon from "@/../public/times_light.svg"
-import { useColorScheme } from "@/app/stores/scheme"
+import { useColorScheme } from "@/stores/scheme"
 import styles from "./hamburger.module.css"
 
-interface MeatProps {
-  children: React.ReactNode
+type HamburgerLink = {
+  href: string
+  title: string
 }
-
-interface MeatComposition {
-  Title: React.FC<MeatTitleProps>
-  Link: React.FC<MeatLinkProps>
-}
-
-interface MeatTitleProps {
-  children: React.ReactNode
-}
-
-interface MeatLinkProps {
-  link: string
-}
-
-export const Meat: React.FC<MeatProps> & MeatComposition = ({ children }) => {
-  return <div className={styles.meat}>{children}</div>
-}
-
-const MeatTitle: React.FC<MeatTitleProps> = ({ children }) => {
-  return <p>{children}</p>
-}
-
-const MeatLink: React.FC<MeatLinkProps> = ({ link }) => {
-  return <Link href={link} />
-}
-
-Meat.Title = MeatTitle
-Meat.Link = MeatLink
 
 type HamburgerProps = {
-  children: React.ReactElement<typeof Meat>[] | React.ReactElement<typeof Meat>
+  links: HamburgerLink[]
   width: number
 }
 
-export const Hamburger: React.FC<HamburgerProps> = ({ width, children }) => {
-  const meats = React.Children.toArray(children) as React.ReactElement<
-    typeof Meat
-  >[]
+export const Hamburger: React.FC<HamburgerProps> = ({ width, links }) => {
   const [visible, setVisible] = useState(false)
 
   const scheme = useColorScheme()
@@ -62,6 +33,7 @@ export const Hamburger: React.FC<HamburgerProps> = ({ width, children }) => {
           border: "none",
           padding: "10px",
           margin: "10px",
+          backgroundColor: "#0000",
         }}
       >
         <Image
@@ -86,8 +58,12 @@ export const Hamburger: React.FC<HamburgerProps> = ({ width, children }) => {
             width: width,
           }}
         >
-          {meats.map((meat, i) => (
-            <div key={`${meat.key}_${i}`}>{meat}</div>
+          {links.map((link) => (
+            <div className={styles.meat} key={link.title}>
+              <Link className={styles.link} href={link.href}>
+                {link.title}
+              </Link>
+            </div>
           ))}
         </div>
       )}

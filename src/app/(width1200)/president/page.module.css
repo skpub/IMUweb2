@@ -1,0 +1,59 @@
+.title {
+  text-align: center;
+  margin: 32px;
+}
+
+.container {
+  margin-left: 24px;
+  margin-right: 24px;
+  justify-content: center;
+  display: flex;
+}
+
+.uzaText {
+  margin: 12px;
+  p {
+    padding-bottom: 16px;
+  }
+}
+
+.presidentContainer {
+  display: flex;
+  margin: 12px;
+  flex-flow: column;
+}
+
+.presidentProfile {
+  margin: 12px;
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    padding-top: 10px;
+  }
+}
+
+.gray {
+  color: gray;
+}
+
+.presidentImg {
+  max-width: 400px;
+  height: auto;
+}
+
+.emphasize {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--im_light);
+}
+
+@media (max-width: 900px) {
+  .presidentImg {
+    width: 100%;
+  }
+  .container {
+    flex-flow: column;
+    align-items: center;
+  }
+}

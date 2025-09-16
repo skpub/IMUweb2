@@ -1,39 +1,36 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import imuLogo from "@/../public/IMU_logo.svg"
 import imuLogoLight from "@/../public/IMU_logo_light.svg"
 import imuText from "@/../public/IMU_text_logo.svg"
 import imuTextLight from "@/../public/IMU_text_logo_light.svg"
-import { Hamburger, Meat } from "@/components/hamburger"
+import { Hamburger } from "@/components/hamburger"
 import { useColorScheme } from "../stores/scheme"
 import styles from "./header.module.css"
 
 function Menu() {
+  const contents = [
+    { title: "学長挨拶", href: "/president" },
+    { title: "アクセス", href: "/access" },
+    { title: "学部・大学院", href: "/department" },
+    { title: "入試情報", href: "/entrance" },
+  ]
   return (
-    <div>
-      <div className={styles.MenuPC}>
+    <div className={styles.menuContainer}>
+      <div className={styles.MenuMobile}>
         {/* mobile */}
-        <Hamburger width={100}>
-          <Meat>
-            <Meat.Title>title</Meat.Title>
-            <Meat.Link link={"link"}></Meat.Link>
-          </Meat>
-          <Meat>
-            <Meat.Title>title</Meat.Title>
-            <Meat.Link link={"link"}></Meat.Link>
-          </Meat>
-          <Meat>
-            <Meat.Title>title</Meat.Title>
-            <Meat.Link link={"link"}></Meat.Link>
-          </Meat>
-          <Meat>
-            <Meat.Title>title</Meat.Title>
-            <Meat.Link link={"link"}></Meat.Link>
-          </Meat>
-        </Hamburger>
+        <Hamburger width={100} links={contents}></Hamburger>
       </div>
-      <div className={styles.MenuMobile}>{/* PC */}</div>
+      <div className={styles.MenuPC}>
+        {/* PC */}
+        {contents.map(({ title, href }) => (
+          <Link className={styles.link} key={href} href={href}>
+            {title}
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
@@ -54,9 +51,7 @@ export function Header() {
           alt={"インモラル大学のロゴです"}
         />
       </div>
-      <div className="hamburger">
-        <Menu />
-      </div>
+      <Menu />
     </div>
   )
 }

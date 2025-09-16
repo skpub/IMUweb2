@@ -1,0 +1,75 @@
+.main {
+  display: flex;
+  flex-flow: row;
+  width: 100svw;
+  height: 90px;
+  background-color: var(--background);
+  position: sticky;
+  top: 0;
+  z-index: 1145148101919;
+  align-items: center;
+}
+
+.logoContainer {
+  display: flex;
+  flex-flow: row;
+  height: 90px;
+}
+
+.imuLogo {
+  width: 90px;
+  height: 90px;
+  margin-right: -10px;
+}
+
+.imuText {
+  width: 200px;
+  height: 100%;
+}
+
+.menuContainer {
+  display: flex;
+  flex: 1;
+}
+
+@media (max-width: 360px) {
+  .imuLogo {
+    margin-top: 10px;
+    height: 70px;
+    width: 70px;
+  }
+  .imuText {
+    width: 160px;
+  }
+}
+
+@media (max-width: 900px) {
+  .MenuPC {
+    display: none;
+  }
+
+  .MenuMobile {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 901px) {
+  .MenuMobile {
+    display: none;
+  }
+  .MenuPC {
+    background-color: var(--immoral);
+    height: 90px;
+    flex: 1;
+    align-items: center;
+    margin-left: 24px;
+    padding-left: 50px;
+    display: flex;
+  }
+}
+
+.link {
+  color: var(--white);
+  padding: 12px;
+}
