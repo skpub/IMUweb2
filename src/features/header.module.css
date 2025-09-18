@@ -8,18 +8,21 @@
   top: 0;
   z-index: 1145148101919;
   align-items: center;
+  box-shadow: 0px 5px 10px var(--shadow);
 }
 
 .logoContainer {
   display: flex;
   flex-flow: row;
   height: 90px;
+  img {
+    filter: drop-shadow(2px 2px 2px var(--shadow));
+  }
 }
 
 .imuLogo {
   width: 90px;
   height: 90px;
-  margin-right: -10px;
 }
 
 .imuText {
@@ -71,6 +74,13 @@
 
 .link {
   color: var(--white);
+  text-decoration: none;
+  padding: 12px;
+}
+
+.currentLink {
+  color: var(--white);
+  filter: brightness(220%);
   text-decoration: none;
   padding: 12px;
 }

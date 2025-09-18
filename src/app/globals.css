@@ -4,7 +4,10 @@
   --im_light: #9768b3;
   --im_dark: #582a73;
   --red: #ff6050;
+  --shadow_dark: #00000090;
+  --shadow_light: #00000020;
 
+  --shadow: var(--shadow_light);
   --background: var(--white);
   --foreground: var(--im_dark);
   --immoral: var(--im_light);
@@ -12,6 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --shadow: var(--shadow_dark);
     --immoral: var(--im_dark);
     --background: var(--black);
     --foreground: var(--white);
@@ -45,6 +49,16 @@ p,
 li {
   padding-bottom: 16px;
   line-height: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+  text-shadow: 1px 1px 1px var(--shadow);
 }
 
 @media (prefers-color-scheme: dark) {

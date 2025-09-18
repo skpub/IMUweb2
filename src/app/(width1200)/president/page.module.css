@@ -40,6 +40,16 @@
 .presidentImg {
   max-width: 400px;
   height: auto;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--shadow);
+  transition: 0.1s all ease 0s;
+  border-radius: 5px;
+}
+
+.presidentImg:hover {
+  transform: none;
+  box-shadow: none;
+  filter: sepia(30%);
 }
 
 .emphasize {

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import president from "@/../public/president.webp"
 import styles from "./page.module.css"
 
@@ -8,7 +9,13 @@ export default function Home() {
       <h1 className={styles.title}>学長挨拶</h1>
       <div className={styles.container}>
         <div className={styles.presidentContainer}>
-          <Image className={styles.presidentImg} src={president} alt={"学長"} />
+          <Link href="https://www.sk-dev.org" target="_blank">
+            <Image
+              className={styles.presidentImg}
+              src={president}
+              alt={"学長"}
+            />
+          </Link>
           <div className={styles.presidentProfile}>
             <h1>インモラル大学学長</h1>
             <h1>佐藤海音 (Sato Kaito)</h1>

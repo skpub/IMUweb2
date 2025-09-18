@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import imuLogo from "@/../public/IMU_logo.svg"
 import imuLogoLight from "@/../public/IMU_logo_light.svg"
 import imuText from "@/../public/IMU_text_logo.svg"
@@ -11,6 +12,7 @@ import { useColorScheme } from "../stores/scheme"
 import styles from "./header.module.css"
 
 function Menu() {
+  const pathName = usePathname()
   const contents = [
     { title: "学長挨拶", href: "/president" },
     { title: "アクセス", href: "/access" },
@@ -26,7 +28,11 @@ function Menu() {
       <div className={styles.MenuPC}>
         {/* PC */}
         {contents.map(({ title, href }) => (
-          <Link className={styles.link} key={href} href={href}>
+          <Link
+            className={href === pathName ? styles.currentLink : styles.link}
+            key={href}
+            href={href}
+          >
             {title}
           </Link>
         ))}
