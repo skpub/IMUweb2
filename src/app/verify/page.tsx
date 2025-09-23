@@ -6,9 +6,7 @@ import { OTC2IDToken } from "./actions"
 import styles from "./page.module.css"
 
 export default function VerifyPage() {
-  const [verifyState, setVerifyState] = useState<"idle" | "success" | "error">(
-    "idle",
-  )
+  const [_, setVerifyState] = useState<"idle" | "success" | "error">("idle")
   const getToken = async (formData: FormData) => {
     const res = await OTC2IDToken(formData)
     if (res) {

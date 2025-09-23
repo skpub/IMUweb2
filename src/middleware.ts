@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server"
 import { setNewToken, verifyJWT } from "./lib/jwt"
 
 export async function middleware(req: NextRequest) {
-  const tokenState = await verifyJWT(req)
+  const tokenState = await verifyJWT()
 
   switch (tokenState.state) {
     case "error":

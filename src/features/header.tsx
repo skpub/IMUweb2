@@ -18,6 +18,7 @@ function Menu() {
     { title: "アクセス", href: "/access" },
     { title: "学部・大学院", href: "/department" },
     { title: "入試情報", href: "/admission" },
+    { title: "マイクラサーバ", href: "/minecraft" },
   ]
   return (
     <div className={styles.menuContainer}>
