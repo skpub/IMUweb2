@@ -1,0 +1,19 @@
+.container {
+  margin-top: 100px;
+  width: 100svw;
+  background: var(--immoral);
+  box-shadow: 0px -5px 10px var(--shadow);
+  height: 90px;
+  padding-left: 50px;
+
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+
+  color: var(--white);
+  * {
+    text-shadow: none;
+    padding: 20px;
+  }
+}

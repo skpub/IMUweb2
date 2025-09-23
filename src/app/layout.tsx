@@ -1,22 +1,13 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
-import { Header } from "../features/header"
+import Footer from "@/features/footer"
+import { Header } from "@/features/header"
 import { ColorSchemeProvider } from "../stores/scheme"
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
 
 export const metadata: Metadata = {
   title: "IMUwebapp",
   description: "インモラル大学の公式サイトです",
+  icons: [{ rel: "icon", url: "/IMU_logo_light.svg" }],
 }
 
 export default function RootLayout({
@@ -26,11 +17,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         <ColorSchemeProvider>
           <Header />
         </ColorSchemeProvider>
-        {children}
+        <div
+          style={{
+            flex: "1",
+          }}
+        >
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   )

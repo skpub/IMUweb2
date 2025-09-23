@@ -28,7 +28,10 @@
 
 html,
 body {
+  min-height: 100svh;
   min-width: 100vw;
+  display: flex;
+  flex-flow: column;
 }
 
 body {
