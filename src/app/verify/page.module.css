@@ -1,0 +1,38 @@
+.container {
+  margin: 24px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  form {
+    display: flex;
+    flex-flow: column;
+    margin: 24px;
+    input {
+      margin: 10px;
+      background: #0000;
+      padding: 10px;
+      border-radius: 1145148101919px;
+      border: none;
+      box-shadow:
+        -2px -2px 2px var(--shadow),
+        2px 2px 2px var(--light);
+      font-size: 24px;
+    }
+    button {
+      background: #0000;
+      height: 48px;
+      border-radius: 1145148101919px;
+      border: none;
+      box-shadow:
+        2px 2px 2px var(--shadow),
+        -2px -2px 2px var(--light);
+      margin: 10px;
+      transition: all 0.3s ease-out;
+    }
+    button:hover {
+      box-shadow:
+        -2px -2px 2px var(--shadow),
+        2px 2px 2px var(--light);
+    }
+  }
+}

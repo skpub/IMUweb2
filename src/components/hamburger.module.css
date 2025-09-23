@@ -1,3 +1,10 @@
+.button {
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  background: #0000;
+}
+
 .meats {
   position: absolute;
   padding: 8px;

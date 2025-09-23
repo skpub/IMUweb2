@@ -6,7 +6,7 @@ export async function middleware(req: NextRequest) {
 
   switch (tokenState.state) {
     case "error":
-      return new NextResponse(null, { status: 401 })
+      return NextResponse.redirect(new URL("/verify", req.url))
     case "continue":
       return
     case "new": {

@@ -32,6 +32,10 @@
 
 .menuContainer {
   display: flex;
+  font-size: 18px;
+  a {
+    text-shadow: none;
+  }
   flex: 1;
 }
 
@@ -79,8 +83,10 @@
 }
 
 .currentLink {
-  color: var(--white);
-  filter: brightness(220%);
+  color: var(--immoral);
+  text-shadow:
+    1px 1px 1px color-mix(in srgb, var(--immoral) 60%, white),
+    -1px -1px 1px color-mix(in srgb, var(--immoral) 60%, black) !important;
   text-decoration: none;
   padding: 12px;
 }

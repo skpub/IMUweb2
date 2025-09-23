@@ -27,14 +27,9 @@ export const Hamburger: React.FC<HamburgerProps> = ({ width, links }) => {
   return (
     <div>
       <button
+        className={styles.button}
         type="button"
         onClick={() => setVisible(!visible)}
-        style={{
-          border: "none",
-          padding: "10px",
-          margin: "10px",
-          backgroundColor: "#0000",
-        }}
       >
         <Image
           src={
