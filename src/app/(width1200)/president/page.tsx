@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import president from "@/../public/president.webp"
+import president from "@/../public/president_gakubuchi.webp"
 import styles from "./page.module.css"
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className={styles.uzaText}>
           <p>
-            <span className={styles.emphasize}>
+            <span className={styles.emphasize2}>
               新入生の皆さん、インモラル大学へようこそ(150dB)。
             </span>
           </p>

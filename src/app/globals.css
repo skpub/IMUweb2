@@ -1,5 +1,5 @@
 :root {
-  --white: #f0e3e8;
+  --white: #fcf8f9;
   --black: #201735;
   --im_light: #9768b3;
   --im_dark: #582a73;
@@ -28,6 +28,7 @@
 
 html,
 body {
+  letter-spacing: 0.05em;
   min-height: 100svh;
   min-width: 100vw;
   display: flex;

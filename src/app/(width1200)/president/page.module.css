@@ -41,7 +41,7 @@
   max-width: 400px;
   height: auto;
   transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0px var(--shadow);
+  filter: drop-shadow(4px 4px 0px var(--shadow));
   transition: 0.1s all ease 0s;
   border-radius: 5px;
 }
@@ -55,6 +55,12 @@
 .emphasize {
   font-weight: bold;
   font-size: 24px;
+  color: var(--im_light);
+}
+
+.emphasize2 {
+  font-weight: bold;
+  font-size: 36px;
   color: var(--im_light);
 }
 
