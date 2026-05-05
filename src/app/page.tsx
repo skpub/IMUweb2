@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { SlideShow } from "@/components/slideshow"
+import { XTimeline } from "@/components/x-timeline"
 import bukatsu from "../../public/bukatsu.webp"
 import img0 from "../../public/img0.webp"
 import img1 from "../../public/img1.webp"
@@ -36,7 +37,9 @@ export default function Home() {
         <div className={styles.col}>
           <Image src={bukatsu} alt="部活" width={200}></Image>
         </div>
-        心理的安全性を確保しつつ発言しやすい環境作りを目指しています。
+        <p>心理的安全性を確保しつつ発言しやすい環境作りを目指しています。</p>
+        <h2>公式X</h2>
+        <XTimeline />
       </div>
     </div>
   )
