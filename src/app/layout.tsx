@@ -6,7 +6,7 @@ import { Header } from "@/features/header"
 import { ColorSchemeProvider } from "../stores/scheme"
 
 export const metadata: Metadata = {
-  title: "IMUwebapp",
+  title: "インモラル大学公式サイト",
   description: "インモラル大学の公式サイトです",
   icons: [{ rel: "icon", url: "/IMU_logo_light.svg" }],
 }
