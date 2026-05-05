@@ -15,27 +15,23 @@
   display: flex;
   flex-flow: row;
   height: 90px;
-  img {
-    filter: drop-shadow(2px 2px 2px var(--shadow));
-  }
 }
 
 .imuLogo {
   width: 90px;
   height: 90px;
+  filter: drop-shadow(2px 2px 2px var(--shadow));
 }
 
 .imuText {
   width: 200px;
   height: 100%;
+  filter: drop-shadow(2px 2px 2px var(--shadow));
 }
 
 .menuContainer {
   display: flex;
   font-size: 18px;
-  a {
-    text-shadow: none;
-  }
   flex: 1;
 }
 
@@ -100,6 +96,7 @@
 .link {
   color: var(--white);
   text-decoration: none;
+  text-shadow: none;
   padding: 12px;
 }
 

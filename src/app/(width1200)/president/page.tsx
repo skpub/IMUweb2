@@ -17,10 +17,10 @@ export default function Home() {
             />
           </Link>
           <div className={styles.presidentProfile}>
-            <h1>インモラル大学学長</h1>
-            <h1>佐藤海音 (Sato Kaito)</h1>
-            <p>博士(実践ハラスメント学)(インモラル大学) ※</p>
-            <p className={styles.gray}>※虚偽です</p>
+            <h1 className={styles.profileH1}>インモラル大学学長</h1>
+            <h1 className={styles.profileH1}>佐藤海音 (Sato Kaito)</h1>
+            <p className={styles.profileP}>博士(実践ハラスメント学)(インモラル大学) ※</p>
+            <p className={`${styles.profileP} ${styles.gray}`}>※虚偽です</p>
           </div>
         </div>
         <div className={styles.uzaText}>

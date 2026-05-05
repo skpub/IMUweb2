@@ -41,11 +41,11 @@ export default function Home() {
       </MarginLeftRight24>
       <h1 className={styles.title}>受験方法</h1>
       <MarginLeftRight24>
-        <ol className={styles.list}>
+        <ol>
           <li>
-            <Link href="shiken.pdf">試験問題(pdf)</Link>
+            <Link className={styles.listLink} href="shiken.pdf">試験問題(pdf)</Link>
             を解いて、
-            <Link href="https://x.com/OMGR_dearinsu">
+            <Link className={styles.listLink} href="https://x.com/OMGR_dearinsu">
               解答をXのDMで学長に送って下さい。
             </Link>
           </li>
