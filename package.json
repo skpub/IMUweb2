@@ -4,25 +4,22 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "pregenerate": "mkdir generate",
-    "generate": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./generate --grpc_out=grpc_js:./generate --ts_out=grpc_js:./generate -I IMUbackendPlugin/src/main/proto IMUbackendPlugin/src/main/proto/*.proto",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write"
   },
   "dependencies": {
-    "@grpc/grpc-js": "^1.14.3",
     "@radix-ui/react-icons": "^1.3.2",
-    "@types/google-protobuf": "^3.15.12",
-    "google-protobuf": "^4.0.1",
-    "jose": "^6.1.3",
-    "minecraft-protocol": "^1.62.0",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.5.0",
+    "@types/three": "^0.183.1",
     "next": "16.1.1",
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-aria-components": "^1.14.0",
     "react-dom": "19.2.3",
+    "three": "^0.183.2",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
@@ -30,8 +27,6 @@
     "@types/node": "^25.0.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "grpc-tools": "^1.13.1",
-    "grpc_tools_node_protoc_ts": "^5.3.3",
     "typescript": "^5.9.3"
   },
   "overrides": {

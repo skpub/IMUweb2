@@ -1,15 +1,21 @@
 .button {
   border: none;
-  padding: 10px;
-  margin: 10px;
-  background: #0000;
+  padding: 13px;
+  margin: 0;
+  min-width: 56px;
+  min-height: 56px;
+  background: var(--background);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 .meats {
   position: absolute;
   padding: 8px;
   right: 0;
+  bottom: calc(100% + 10px);
   background-color: var(--immoral);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 .meat {

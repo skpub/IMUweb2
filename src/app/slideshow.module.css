@@ -1,7 +1,18 @@
 .box {
-  max-height: 50svh;
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 50svh, 560px);
+  overflow: hidden;
 }
 
 .img {
-  max-height: 50svh;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .box {
+    height: clamp(156px, 30svh, 336px);
+    background: var(--background);
+  }
+
 }

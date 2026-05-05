@@ -21,21 +21,18 @@ export function SlideShow({ styles, imgs, interval }: SlideShowProps) {
   }, [imgs.length, interval])
 
   return (
-    <div className={styles.box} style={{ width: "100%", position: "relative"}}>
+    <div className={styles.box}>
       {imgs.map((img, i) => (
         <Image
           className={styles.img}
           key={img.src}
           src={img}
           alt={`スライド ${i + 1}`}
+          fill
+          sizes="100vw"
           style={{
-            position: "absolute",
             opacity: i === index ? "1" : "0",
             transition: "opacity 1s ease-in-out",
-            objectFit: "cover",
-            width: "100%",
-            display: "block",
-            height: "auto",
           }}
         />
       ))}

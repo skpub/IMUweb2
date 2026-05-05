@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
+import { SmokeOverlay } from "@/components/smoke_overlay"
 import Footer from "@/features/footer"
 import { Header } from "@/features/header"
 import { ColorSchemeProvider } from "../stores/scheme"
@@ -19,16 +20,19 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ColorSchemeProvider>
+          {/* ColorSchemeProvider によって useColoeScheme できる ("light" | "dark")*/}
           <Header />
+          <SmokeOverlay style={{ paddingBottom: "100px" }}>
+            <div
+              style={{
+                flex: "1",
+              }}
+            >
+              {children}
+            </div>
+          </SmokeOverlay>
+          <Footer />
         </ColorSchemeProvider>
-        <div
-          style={{
-            flex: "1",
-          }}
-        >
-          {children}
-        </div>
-        <Footer />
       </body>
     </html>
   )

@@ -7,7 +7,7 @@ import styles from "./page.module.css"
 export default function Home() {
   return (
     <MarginLeftRight24>
-      <h1 className={styles.title}>アクセス</h1>
+      <h1 className={styles.title}>マイクラサーバへのアクセス</h1>
       <MarginLeftRight24>
         <ol>
           <li>

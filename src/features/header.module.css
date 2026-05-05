@@ -51,13 +51,34 @@
 }
 
 @media (max-width: 900px) {
+  .main {
+    justify-content: center;
+  }
+
+  .logoContainer {
+    transform: translateX(-45px);
+  }
+
+  .menuContainer {
+    flex: 0;
+  }
+
   .MenuPC {
     display: none;
   }
 
   .MenuMobile {
     display: flex;
-    margin-left: auto;
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    z-index: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .logoContainer {
+    transform: translateX(-35px);
   }
 }
 
