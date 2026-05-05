@@ -1,6 +1,12 @@
+import type { Metadata } from "next"
 import Link from "next/link"
-import styles from "./page.module.css"
 import { MarginLeftRight24 } from "@/components/marginLeft24"
+import styles from "./page.module.css"
+
+export const metadata: Metadata = {
+  title: "学部・大学院",
+  openGraph: { title: "学部・大学院 | インモラル大学" },
+}
 
 export default function Home() {
   const departments = [

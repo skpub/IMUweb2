@@ -6,9 +6,22 @@ import { Header } from "@/features/header"
 import { ColorSchemeProvider } from "../stores/scheme"
 
 export const metadata: Metadata = {
-  title: "インモラル大学公式サイト",
+  metadataBase: new URL(process.env.IMUWEB_ORIGIN ?? "http://localhost"),
+  title: {
+    default: "インモラル大学",
+    template: "%s | インモラル大学",
+  },
   description: "インモラル大学の公式サイトです",
   icons: [{ rel: "icon", url: "/IMU_logo_light.svg" }],
+  openGraph: {
+    siteName: "インモラル大学",
+    description: "インモラル大学の公式サイトです",
+    images: [{ url: "/img0.webp" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 }
 
 export default function RootLayout({

@@ -1,7 +1,13 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import president from "@/../public/president_gakubuchi.webp"
 import styles from "./page.module.css"
+
+export const metadata: Metadata = {
+  title: "学長挨拶",
+  openGraph: { title: "学長挨拶 | インモラル大学" },
+}
 
 export default function Home() {
   return (

@@ -1,8 +1,14 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import map from "@/../public/IMU_map.webp"
 import { MarginLeftRight24 } from "@/components/marginLeft24"
 import styles from "./page.module.css"
+
+export const metadata: Metadata = {
+  title: "アクセス",
+  openGraph: { title: "アクセス | インモラル大学" },
+}
 
 export default function Home() {
   return (
