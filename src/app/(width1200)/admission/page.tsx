@@ -49,10 +49,12 @@ export default function Home() {
       <MarginLeftRight24>
         <ol>
           <li>
-            <Link className={styles.listLink} href="shiken.pdf">試験問題(pdf)</Link>
+            <Link className={styles.listLink} href="shiken.pdf">
+              試験問題(pdf)
+            </Link>
             を解いて、
-            <Link className={styles.listLink} href="https://x.com/OMGR_dearinsu">
-              解答をXのDMで学長に送って下さい。
+            <Link className={styles.listLink} href="https://x.com/IMU_gakucho">
+              解答をXのDMでインモラル大学公式に送って下さい。
             </Link>
           </li>
           <li>
